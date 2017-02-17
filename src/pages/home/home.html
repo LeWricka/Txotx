@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <counter [counter]="counter$ | async" (increment)="actions.increment()" (decrement)="actions.decrement()" (multiply)="actions.multiply()">
+  </counter>
+  <button (click)="goToTurn()"> Go to turn</button>
+</ion-content>
