@@ -16,26 +16,26 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 })
 export class HomePage {
   @select() counter$: Observable<CounterRecord>;
-  items: FirebaseListObservable<any[]>;
-
+  users: FirebaseListObservable<any[]>;
+  // users: FirebaseObjectObservable<any>;
   constructor(public navCtrl: NavController,
     public actions: CounterActions,
     public af: AngularFire, private _auth: AuthService) {
-      this.items = af.database.list('/items');
-      console.log(this.items);
+    this.signInWithFacebook;
   }
 
   signInWithFacebook(): void {
+    console.log('asdf');
     this._auth.signInWithFacebook()
-    .then(() => this.onSignInSuccess());
+      .then(() => this.onSignInSuccess());
   }
 
   private onSignInSuccess(): void {
-    console.log("Facebook display name ",this);
+    this.users = this.af.database.list('/sidreros');
   }
 
-  goToTurn() {
-    this.navCtrl.push(TurnPage, {});
+  goToUser(user: any) {
+    this.navCtrl.push(TurnPage, {user: user});
   }
-
+  
 }

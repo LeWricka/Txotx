@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs/Observable';
 import { select } from 'ng2-redux';
@@ -15,6 +15,7 @@ export class TurnPage {
   @select() turn$: Observable<Turn>;
 
   constructor(public navCtrl: NavController,
-    public actions: CounterActions) {
+    public actions: CounterActions, params: NavParams) {
+      console.log(params.get('user'));
   }
 }

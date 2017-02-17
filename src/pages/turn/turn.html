@@ -1,12 +1,14 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Turn
+      {{ user }}
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <p>Nombre</p>
+  <p></p>
   <turn [turn]="turn$ | async">
   </turn>
 </ion-content>
