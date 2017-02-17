@@ -1,10 +1,7 @@
 import { Component } from '@angular/core';
 import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
-import { InitialState} from ''
-
 import { HomePage } from '../pages/home/home';
-
 import { middleware, enhancers } from '../store';
 import { NgRedux } from 'ng2-redux';
 import { AppState, rootReducer } from '../store/store';

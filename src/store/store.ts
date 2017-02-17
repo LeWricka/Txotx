@@ -8,6 +8,11 @@ export class AppState {
   readonly turn?: turn.Turn;
 };
 
+// const appReducer = combineReducers<AppState>({
+//   counter: counter.counterReducer,
+//   turn: turn.turnReducer
+// });
+
 export const rootReducer = combineReducers<AppState>({
   counter: counter.counterReducer,
   turn: turn.turnReducer

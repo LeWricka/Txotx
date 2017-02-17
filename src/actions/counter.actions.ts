@@ -7,8 +7,9 @@ export class CounterActions {
   static INCREMENT_COUNTER = 'INCREMENT_COUNTER';
   static DECREMENT_COUNTER = 'DECREMENT_COUNTER';
   static MULTIPLY_COUNTER = 'MULTIPLY_COUNTER';
+  static CLEAN_STATE = 'CLEAN_STATE';
 
-  constructor(private ngRedux: NgRedux<AppState>) {}
+  constructor(private ngRedux: NgRedux<AppState>) { }
 
   increment() {
     this.ngRedux.dispatch({ type: CounterActions.INCREMENT_COUNTER });
@@ -19,6 +20,13 @@ export class CounterActions {
   }
 
   multiply() {
-    this.ngRedux.dispatch({ type: CounterActions.MULTIPLY_COUNTER});
+    console.log('multiply1');
+
+    this.ngRedux.dispatch({ type: CounterActions.MULTIPLY_COUNTER });
+  }
+
+  clean() {
+    console.log('cleanState');
+    this.ngRedux.dispatch({ type: CounterActions.MULTIPLY_COUNTER });
   }
 }
