@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^1.0.0",
-    "@types/jasmine": "^2.5.37",
+    "@types/jasmine": "2.5.41",
     "@types/node": "^6.0.46",
     "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.7",
@@ -53,7 +53,7 @@
     "redux-logger": "^2.7.4",
     "ts-loader": "^1.0.0",
     "tslint-ionic-rules": "0.0.8",
-    "typescript": "2.0.9",
+    "typescript": "~2.0.10",
     "webpack": "^1.13.3"
   },
   "cordovaPlugins": [
