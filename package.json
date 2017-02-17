@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@ionic/app-scripts": "^1.0.0",
-    "@types/jasmine": "^2.5.37",
+    "@types/jasmine": "2.5.41",
     "@types/node": "^6.0.46",
     "babel-cli": "^6.18.0",
     "babel-loader": "^6.2.7",

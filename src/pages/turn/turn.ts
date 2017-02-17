@@ -8,7 +8,7 @@ import { Turn } from '../../store/turn/turn.types';
 
 @Component({
   selector: 'turn-page',
-  providers: [ AsyncPipe, CounterActions ],
+  providers: [AsyncPipe, CounterActions],
   templateUrl: 'turn.html'
 })
 export class TurnPage {

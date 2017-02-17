@@ -24,6 +24,10 @@ import { CounterRecord } from '../../store';
       *
     </button>
 
+    <button ion-button (click)="clean.emit()">
+      Clean
+    </button>
+
     <p> {{ counter ? counter.text: 'next test'}}
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -33,4 +37,5 @@ export class Counter {
   @Output() increment = new EventEmitter<void>();
   @Output() decrement = new EventEmitter<void>();
   @Output() multiply = new EventEmitter<void>();
+  @Output() clean = new EventEmitter<void>();
 };
