@@ -1,121 +1,90 @@
 {
 	"sidreros": {
-		"miren": [{
-			"ceveza": 1
-		}, {
-			"txotx": 1
-		}, {
-			"cubata": 1
-		}, {
-			"txupito": 1
-		}],
-    "karlos": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    "borrachos": {
+
+		"miren": {
+      "name": "miren",
+			"ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "pablo": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+		},
+    "karlos": {
+      "name":"karlos",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "gorka": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "pablo": {
+      "name": "pablo",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "iker": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "gorka": {
+      "name": "gorka",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "pablo": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "iker":{
+      "name":"iker",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "susana": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "susana": {
+      "name": "susana",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "aritz": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "aritz": {
+      "name":"aritz",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "isma": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "isma": {
+      "name": "isma",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "cornago": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "cornago": {
+      "name": "cornago",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "victor": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "victor": {
+      "name": "victor",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "carols": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "carol": {
+      "name": "carol",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }],
-    "luis": [{
-      "ceveza": 1
-    }, {
-      "txotx": 1
-    }, {
-      "cubata": 1
-    }, {
+    },
+    "luis": {
+      "name": "luis",
+      "ceveza": 1,
+      "txotx": 1,
+      "cubata": 1,
       "txupito": 1
-    }]
+    }
 	}
 }

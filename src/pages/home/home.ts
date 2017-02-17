@@ -37,5 +37,5 @@ export class HomePage {
   goToUser(user: any) {
     this.navCtrl.push(TurnPage, {user: user});
   }
-  
+
 }

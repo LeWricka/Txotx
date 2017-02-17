@@ -8,49 +8,36 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, NavParams } from 'ionic-angular';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs/Observable';
 import { select } from 'ng2-redux';
 import { CounterActions } from '../../actions';
-import { TurnPage } from '../turn/turn';
-import { AuthService } from '../../providers/auth-service';
 import { AngularFire } from 'angularfire2';
-var HomePage = (function () {
-    function HomePage(navCtrl, actions, af, _auth) {
+var TurnPage = (function () {
+    function TurnPage(navCtrl, af, actions, params) {
         this.navCtrl = navCtrl;
         this.actions = actions;
-        this.af = af;
-        this._auth = _auth;
-        this.signInWithFacebook;
+        this.item = af.database.object('/sidreros/aritz');
+        this.datosUsuario = params.get('user');
     }
-    HomePage.prototype.signInWithFacebook = function () {
-        var _this = this;
-        console.log('asdf');
-        this._auth.signInWithFacebook()
-            .then(function () { return _this.onSignInSuccess(); });
+    TurnPage.prototype.update = function (name) {
+        this.item.update({ name: 'movida' });
     };
-    HomePage.prototype.onSignInSuccess = function () {
-        this.users = this.af.database.list('/sidreros');
-    };
-    HomePage.prototype.goToUser = function (user) {
-        this.navCtrl.push(TurnPage, { user: user });
-    };
-    return HomePage;
+    return TurnPage;
 }());
 __decorate([
     select(),
     __metadata("design:type", Observable)
-], HomePage.prototype, "counter$", void 0);
-HomePage = __decorate([
+], TurnPage.prototype, "turn$", void 0);
+TurnPage = __decorate([
     Component({
-        selector: 'page-home',
+        selector: 'turn-page',
         providers: [AsyncPipe, CounterActions],
-        templateUrl: 'home.html'
+        templateUrl: 'turn.html'
     }),
-    __metadata("design:paramtypes", [NavController,
-        CounterActions,
-        AngularFire, AuthService])
-], HomePage);
-export { HomePage };
-//# sourceMappingURL=home.js.map
+    __metadata("design:paramtypes", [NavController, AngularFire,
+        CounterActions, NavParams])
+], TurnPage);
+export { TurnPage };
+//# sourceMappingURL=turn.js.map

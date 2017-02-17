@@ -7,8 +7,7 @@
 </ion-header>
 
 <ion-content padding>
-  <p>Nombre</p>
+  <p>cerveza: {{datosUsuario.ceveza}}</p>
   <p></p>
-  <turn [turn]="turn$ | async">
-  </turn>
+  <button (click)="update()">Update Size</button>
 </ion-content>
