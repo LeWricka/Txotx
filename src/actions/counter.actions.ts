@@ -20,13 +20,10 @@ export class CounterActions {
   }
 
   multiply() {
-    console.log('multiply1');
-
     this.ngRedux.dispatch({ type: CounterActions.MULTIPLY_COUNTER });
   }
 
-  clean() {
-    console.log('cleanState');
-    this.ngRedux.dispatch({ type: CounterActions.MULTIPLY_COUNTER });
+  cleanState() {
+    this.ngRedux.dispatch({ type: CounterActions.CLEAN_STATE });
   }
 }
