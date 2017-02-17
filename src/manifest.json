@@ -1,8 +1,8 @@
 {
   "name": "Txotx",
-  "short_name": "Txotx",
-  "start_url": "index.html",
-  "display": "fullscreen",
+  "short_name": "Txotx el calculador",
+  "start_url": "./index.html",
+  "display": "standalone",
   "icons": [{
         "src": "assets/images/touch/icon-128x128.png",
         "sizes": "128x128",
