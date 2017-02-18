@@ -32,7 +32,7 @@ export class TurnPage {
   updateCerveza(actualValue) {
     console.log('Birra');
     console.log(actualValue);
-    this.item.update({ cervea: actualValue + 1 });
+    this.item.update({ ceveza: actualValue + 1 });
   }
 
   updateVino(actualValue) {
