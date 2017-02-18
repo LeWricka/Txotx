@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, LoadingController } from 'ionic-angular';
 import { CounterRecord } from '../../store';
 import { AsyncPipe } from '@angular/common';
 import { Observable } from 'rxjs/Observable';
@@ -8,6 +8,7 @@ import { CounterActions } from '../../actions';
 import { TurnPage } from '../turn/turn';
 import { AuthService } from '../../providers/auth-service';
 import { AngularFire, FirebaseListObservable } from 'angularfire2';
+import { RankingPage } from '../ranking/ranking';
 
 @Component({
   selector: 'page-home',
@@ -17,25 +18,33 @@ import { AngularFire, FirebaseListObservable } from 'angularfire2';
 export class HomePage {
   @select() counter$: Observable<CounterRecord>;
   users: FirebaseListObservable<any[]>;
+  loading: any;
   // users: FirebaseObjectObservable<any>;
   constructor(public navCtrl: NavController,
     public actions: CounterActions,
-    public af: AngularFire, private _auth: AuthService) {
+    public af: AngularFire, private _auth: AuthService,
+    public loadingCtrl: LoadingController) {
     this.signInWithFacebook;
   }
 
   signInWithFacebook(): void {
-    console.log('asdf');
+    this.loading = this.loadingCtrl.create({ content: '¡Llamando al camarero!' });
+    this.loading.present();
+
     this._auth.signInWithFacebook()
       .then(() => this.onSignInSuccess());
   }
 
   private onSignInSuccess(): void {
     this.users = this.af.database.list('/sidreros');
+    this.loading.dismiss();
   }
 
   goToUser(user: any) {
-    this.navCtrl.push(TurnPage, {user: user});
+    this.navCtrl.push(TurnPage, { user: user });
   }
 
+  goToRanking() {
+    this.navCtrl.push(RankingPage);
+  }
 }

@@ -10,6 +10,7 @@ import { AppState } from '../store/store';
 
 import { AngularFireModule } from 'angularfire2';
 import { AuthService } from '../providers/auth-service';
+import { RankingPage } from '../pages/ranking/ranking';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDG_EY7UyEAAegGqG1k9E3P5xcLJ-zxXIs',
@@ -28,6 +29,7 @@ export function ngReduxFactory() {
     MyApp,
     HomePage,
     TurnPage,
+    RankingPage,
     ...Components
   ],
   imports: [
@@ -38,7 +40,8 @@ export function ngReduxFactory() {
   entryComponents: [
     MyApp,
     HomePage,
-    TurnPage
+    TurnPage,
+    RankingPage
   ],
   providers: [
     AuthService,

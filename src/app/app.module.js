@@ -9,6 +9,8 @@ import { IonicApp, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { TurnPage } from '../pages/turn/turn';
+import { RankingPage } from '../pages/ranking/ranking';
+
 import { Components } from '../components';
 import { NgRedux } from 'ng2-redux';
 import { AngularFireModule } from 'angularfire2';
@@ -33,7 +35,8 @@ AppModule = __decorate([
         declarations: [
             MyApp,
             HomePage,
-            TurnPage
+            TurnPage,
+            RankingPage
         ].concat(Components),
         imports: [
             IonicModule.forRoot(MyApp),
@@ -43,7 +46,8 @@ AppModule = __decorate([
         entryComponents: [
             MyApp,
             HomePage,
-            TurnPage
+            TurnPage,
+            RankingPage
         ],
         providers: [
             AuthService,

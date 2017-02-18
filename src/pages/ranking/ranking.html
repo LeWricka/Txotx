@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ranking
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding="true" class="has-header">
+  <ion-content padding="true" class="has-header">
+    <div id="home-markdown4" class="show-list-numbers-and-dots">
+      <p style="color:#000000;font-size:27px;"></p>
+    </div>
+    <ion-item>
+      <ion-label>Elige categoría</ion-label>
+      <ion-select [(ngModel)]="categoria">
+        <ion-option value="txotx" selected="true">Txotx</ion-option>
+        <ion-option value="ceveza">Cerveza</ion-option>
+        <ion-option value="vino">Vino</ion-option>
+        <ion-option value="cubata">Kubata</ion-option>
+        <ion-option value="txupito">Txupito</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-list>
+      <ion-item reorder="true" (ionItemReorder)="reorderItems($event)" class="text" *ngFor="let user of users | async">
+        {{user.name}}
+        <span style="float: right"class="item-note">{{user[categoria]}}</span>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-content>
