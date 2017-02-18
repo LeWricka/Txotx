@@ -22,7 +22,10 @@
     </ion-item>
     <ion-list>
       <ion-item reorder="true" (ionItemReorder)="reorderItems($event)" class="text" *ngFor="let user of users | async">
-        {{user.name}}
+        <ion-avatar>
+          <img src="../../assets/img/{{user.name}}.jpg">
+        </ion-avatar>
+        <h2><b>{{user.name}}</b></h2>
         <span style="float: right"class="item-note">{{user[categoria]}}</span>
       </ion-item>
     </ion-list>
