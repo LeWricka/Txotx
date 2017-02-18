@@ -25,7 +25,6 @@ export class HomePage {
   }
 
   signInWithFacebook(): void {
-    console.log('asdf');
     this._auth.signInWithFacebook()
       .then(() => this.onSignInSuccess());
   }
@@ -37,5 +36,4 @@ export class HomePage {
   goToUser(user: any) {
     this.navCtrl.push(TurnPage, {user: user});
   }
-
 }
