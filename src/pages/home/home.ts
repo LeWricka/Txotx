@@ -25,14 +25,14 @@ export class HomePage {
     public af: AngularFire, private _auth: AuthService,
     public loadingCtrl: LoadingController) {
     this.signInWithFacebook;
-  }
-
-  signInWithFacebook(): void {
     this.loading = this.loadingCtrl.create({ content: '¡Llamando al camarero!' });
     this.loading.present();
 
     this._auth.signInWithFacebook()
       .then(() => this.onSignInSuccess());
+  }
+
+  signInWithFacebook(): void {
   }
 
   private onSignInSuccess(): void {

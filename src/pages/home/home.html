@@ -7,14 +7,26 @@
 </ion-header>
 
 <ion-content padding>
-  <button ion-button color="primary" block (click)="signInWithFacebook()">Selecciónate y apunta</button>
+  <!-- <button ion-button color="primary" block (click)="signInWithFacebook()">Selecciónate y apunta</button> -->
   <button ion-button color="primary" block (click)="goToRanking()">Ranking</button>
-  <ion-list>
+  <ion-list no-border>
+    <ion-list-header>
+      <ion-note item-right>Cerv</ion-note>
+      <ion-note item-right>Txup</ion-note>
+      <ion-note item-right>Vino</ion-note>
+      <ion-note item-right>Cubata</ion-note>
+      <ion-note item-right>Txotx</ion-note>
+  </ion-list-header>
     <ion-item class="text" *ngFor="let user of users | async" (click)="goToUser(user)">
       <ion-avatar>
         <img src="../../assets/img/{{user.name}}.jpg">
       </ion-avatar>
       <h2><b>{{user.name}}</b></h2>
+      <ion-note item-right> <ion-icon name="beer"> </ion-icon> {{user.ceveza}}</ion-note>
+      <ion-note item-right> <ion-icon name="md-pint"> </ion-icon> {{user.txupito}}</ion-note>
+      <ion-note item-right> <ion-icon name="wine"> </ion-icon> {{user.vino}}</ion-note>
+      <ion-note item-right> <ion-icon name="md-wine"> </ion-icon> {{user.cubata}}</ion-note>
+      <ion-note item-right> <ion-icon name="logo-tumblr"> </ion-icon> {{user.txotx}}</ion-note>
   </ion-item>
 </ion-list>
 </ion-content>
