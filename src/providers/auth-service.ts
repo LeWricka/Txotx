@@ -18,7 +18,7 @@ export class AuthService {
 
   signInWithFacebook(): firebase.Promise<FirebaseAuthState> {
     return this.auth$.login({
-      //provider: AuthProviders.Facebook,
+      // provider: AuthProviders.Facebook,
       provider: AuthProviders.Anonymous,
       method: AuthMethods.Anonymous
     });

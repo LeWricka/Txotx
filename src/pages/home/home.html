@@ -1,19 +1,19 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Txotxo!!!!
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <counter [counter]="counter$ | async" (increment)="actions.increment()" (decrement)="actions.decrement()" (multiply)="actions.multiply()" (cleanState)="actions.cleanState()">
-  </counter>
-  <button (click)="goToTurn()"> Go to turn</button>
-  <button ion-button outline (click)="signInWithFacebook()">Facebook</button>
+  <button ion-button color="primary" block (click)="signInWithFacebook()">Seleccioante y cuenta</button>
   <ion-list>
     <ion-item class="text" *ngFor="let user of users | async" (click)="goToUser(user)">
-      {{user.name}}
+      <ion-avatar>
+        <img src="../../assets/img/{{user.name}}.jpg">
+      </ion-avatar>
+      <h2><b>{{user.name}}</b></h2>
   </ion-item>
 </ion-list>
 </ion-content>
