@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title text-capitalize="">
+            {{ datosUsuario.name }}
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding="true">
+
+
+    <ion-col center text-center>
+        <h2 class="name" text-capitalize><b>{{datosUsuario.name}}</b></h2>
+        <ion-avatar>
+            <img class="image" src="../../assets/img/{{datosUsuario.name}}.jpg">
+        </ion-avatar>
+        <ion-rating
+                [numStars]="5"
+                [readOnly]="false"
+                [value]="datosUsuario.karma.total"
+                (clicked)="pushKarma($event)">
+        </ion-rating>
+    </ion-col>
+</ion-content>

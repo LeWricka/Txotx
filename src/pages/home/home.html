@@ -1,32 +1,66 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Txotx!!!!
-    </ion-title>
-  </ion-navbar>
+    <ion-navbar>
+        <ion-title>
+            Txotx!!!!
+        </ion-title>
+    </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <!-- <button ion-button color="primary" block (click)="signInWithFacebook()">Selecciónate y apunta</button> -->
-  <button ion-button color="primary" block (click)="goToRanking()">Ranking</button>
-  <ion-list no-border>
-    <ion-list-header>
-      <ion-note item-right>Cerv</ion-note>
-      <ion-note item-right>Txup</ion-note>
-      <ion-note item-right>Vino</ion-note>
-      <ion-note item-right>Cubata</ion-note>
-      <ion-note item-right>Txotx</ion-note>
-  </ion-list-header>
-    <ion-item class="text" *ngFor="let user of users | async" (click)="goToUser(user)">
-      <ion-avatar>
-        <img src="../../assets/img/{{user.name}}.jpg">
-      </ion-avatar>
-      <h2><b>{{user.name}}</b></h2>
-      <ion-note item-right> <ion-icon name="beer"> </ion-icon> {{user.ceveza}}</ion-note>
-      <ion-note item-right> <ion-icon name="md-pint"> </ion-icon> {{user.txupito}}</ion-note>
-      <ion-note item-right> <ion-icon name="wine"> </ion-icon> {{user.vino}}</ion-note>
-      <ion-note item-right> <ion-icon name="md-arrow-dropdown"> </ion-icon> {{user.cubata}}</ion-note>
-      <ion-note item-right> <ion-icon name="logo-tumblr"> </ion-icon> {{user.txotx}}</ion-note>
-  </ion-item>
-</ion-list>
+    <!-- <button ion-button color="primary" block (click)="signInWithFacebook()">Selecciónate y apunta</button> -->
+    <button ion-button color="primary" block>Ranking</button>
+    <ion-row text-center center>
+        <ion-col with-20>
+            Avatar
+        </ion-col>
+        <ion-col width-30>
+            Karma
+        </ion-col>
+        <ion-col width-50 text-right no-spaccing>
+            <ion-note>Cerv</ion-note>
+            <ion-note>Txup</ion-note>
+            <ion-note>Vino</ion-note>
+            <ion-note>Kuba</ion-note>
+            <ion-note>Txotx</ion-note>
+        </ion-col>
+    </ion-row>
+    <ion-col text-center>
+        <ion-row *ngFor="let user of users | async" or>
+            <ion-col width-20 center>
+                <h2 class="name" text-capitalize><b>{{user.name}}</b></h2>
+                <ion-avatar>
+                    <img src="../../assets/img/{{user.name}}.jpg">
+                </ion-avatar>
+            </ion-col>
+            <ion-col width-50 center (click)="goTokarma(user)">
+                <ion-rating class="stars"
+                            [numStars]="5"
+                            [readOnly]="false"
+                            [value]="user.karma.total">
+                </ion-rating>
+            </ion-col>
+            <ion-col width-30 center (click)="goToUser(user)">
+                <ion-note>
+                    <ion-icon name="beer"></ion-icon>
+                    {{user.ceveza}}
+                </ion-note>
+                <ion-note>
+                    <ion-icon name="md-pint"></ion-icon>
+                    {{user.txupito}}
+                </ion-note>
+                <ion-note>
+                    <ion-icon name="wine"></ion-icon>
+                    {{user.vino}}
+                </ion-note>
+                <ion-note>
+                    <ion-icon name="md-arrow-dropdown"></ion-icon>
+                    {{user.cubata}}
+                </ion-note>
+                <ion-note>
+                    <ion-icon name="logo-tumblr"></ion-icon>
+                    {{user.txotx}}
+                </ion-note>
+            </ion-col>
+        </ion-row>
+    </ion-col>
 </ion-content>

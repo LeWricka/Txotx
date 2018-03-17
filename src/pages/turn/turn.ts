@@ -75,6 +75,7 @@ export class TurnPage {
           handler: () => {
             console.log('Agree clicked');
             this.item.update({ [bebida]: actualValue });
+
           }
         }
       ]
